@@ -1,0 +1,8 @@
+---
+- name: Create file on Desktop
+  hosts: localhost
+  tasks:
+    - name: Create file.txt
+      file:
+        path: ~/Desktop/file.txt
+        state: touch
