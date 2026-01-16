@@ -1,0 +1,19 @@
+---
+- name: Install devops tools
+  hosts: localhost
+  tasks:
+    - name: Switch to bash shell
+      ansible.builtin.command: bash
+      changed_when: true
+    - name: Install git
+      ansible.builtin.package:
+        name: git
+        state: present
+    - name: Install terraform
+      ansible.builtin.package:
+        name: terraform
+        state: present
+    - name: Install ansible
+      ansible.builtin.package:
+        name: ansible
+        state: present
